@@ -37,7 +37,7 @@ function App() {
   const getEmployees = () => {
     Axios.get("http://localhost:3001/employees").then((response) => {
       setEmployeeList(response.data);
-    });
+    }).catch(err=>console.log(err));
   };
 
   const updateEmployeeWage = (id) => {
