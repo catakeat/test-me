@@ -13,3 +13,28 @@ const db =  mysql.createConnection({
     password : "",
     database : "employeeSystem"
 });
+
+app.post("/create",(req,res)=>{
+    const name =  req.body.name;
+    const age =  req.body.age;
+    const country = req.body.country
+    const position =  req.body.position;
+    const wage = req.body.wage;
+  
+    db.query("INSERT INTO employees(name,age,country,position,wage)  values(?,?,?,?,?)",
+    [name,age,country,position,wage],(err,result)=>{
+        if(err){
+            alert(err.message);
+            console.log(err)
+        }else{
+            res.send("Values Inserted")
+        }
+    }
+    )
+
+
+
+
+
+
+})
