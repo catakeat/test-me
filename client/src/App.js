@@ -114,44 +114,46 @@ function App() {
       <div className="employees">
         <button onClick={getEmployees}>Show Employees</button>
 
-        {employeeList.map((val, key) => {
-          return (
-            <div className="employee">
-              <div>
-                <h3>Name: {val.name}</h3>
-                <h3>Age: {val.age}</h3>
-                <h3>Country: {val.country}</h3>
-                <h3>Position: {val.position}</h3>
-                <h3>Wage: {val.wage}</h3>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  placeholder="2000..."
-                  onChange={(event) => {
-                    setNewWage(event.target.value);
-                  }}
-                />
-                <button
-                  onClick={() => {
-                    updateEmployeeWage(val.id);
-                  }}
-                >
-                  {" "}
-                  Update
-                </button>
+       {employeeList.map((val,key)=>{
+         return(
+          <div className="employee">
+          <div>
+            <h3>Name: {val.name}</h3>
+            <h3>Age: {val.age}</h3>
+            <h3>Country: {val.country}</h3>
+            <h3>Position: {val.position}</h3>
+            <h3>Wage: {val.wage}</h3>
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="2000..."
+              onChange={(event) => {
+                setNewWage(event.target.value);
+              }}
+            />
+            <button
+              onClick={() => {
+                updateEmployeeWage(val.id);
+              }}
+            >
+              {" "}
+              Update
+            </button>
 
-                <button
-                  onClick={() => {
-                    deleteEmployee(val.id);
-                  }}
-                >
-                  Delete
-                </button>
-              </div>
-            </div>
-          );
-        })}
+            <button
+              onClick={() => {
+                deleteEmployee(val.id);
+              }}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+         );
+       })} 
+
+
       </div>
     </div>
   );
