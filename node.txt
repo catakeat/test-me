@@ -1,0 +1,22 @@
+npx json-servernpm run devStart
+npm instal -D (dev depndencies)
+nodemon nume_fiesier
+node instal joi@13.1.1  deci se aduaga nume versiune
+npm espress-generator -- genereaza scheletul aplicatiei
++string  -> il face integer (semnul plus in fata la un string)
+
+These scripts ("start" and "devstart") can be executed by running the command npm run scriptname.
+The command npm run devstart starts the app with two additional development features enabled.
+
+    The DEBUG environment variable is set, specifying that the console log and error pages, such as HTTP 404, display additional information, like a stack trace.
+    In addition, nodemon monitors certain important website files. If you modify these files, such as redesigning a page or modifying static content, nodemon automatically restarts the server to reflect the changes.
+
+mongod --noauth --dbpath F:\Node-projects\teste\database---> dupa care mongo la alta cmd
+
+
+pt react 
+npm run start
+npm install                     calea
+npx json-server --watch data/db.json --port 8000
+
+npm install react-router-dom@5
